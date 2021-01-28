@@ -288,7 +288,10 @@ export default Component.extend({
     if (instance) {
       instance.off('slideChangeTransitionEnd');
       instance.destroy();
-      instance = this.set('_swiper', null);
+      try {
+        instance = this.set('_swiper', null);
+      } catch(e) {
+      }
     }
   },
 
