@@ -1,5 +1,6 @@
-/* globals Swiper */
+import SwiperCore, { Lazy, Navigation, Pagination } from 'swiper/core';
 import Component from '@ember/component';
+import Swiper from 'swiper';
 import { getProperties, computed } from '@ember/object';
 import { once } from '@ember/runloop';
 import { warn } from '@ember/debug';
@@ -262,6 +263,8 @@ export default Component.extend({
       { initialSlide: this.get('currentSlide') },
       this._getOptions()
     );
+
+    SwiperCore.use([Lazy, Navigation, Pagination]);
 
     let transitionEvent = this.get('loop') ? 'slideChangeTransitionEnd' : 'slideChange';
     let instance = this.set('_swiper', new Swiper(this.element, swiperOptions));
