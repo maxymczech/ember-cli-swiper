@@ -263,9 +263,10 @@ export default Component.extend({
       this._getOptions()
     );
 
+    Swiper.use([Lazy, Navigation, Pagination]);
+
     let transitionEvent = this.get('loop') ? 'slideChangeTransitionEnd' : 'slideChange';
     let instance = this.set('_swiper', new Swiper(this.element, swiperOptions));
-    instance.use([Lazy, Navigation, Pagination]);
     instance.on(
       transitionEvent,
       this._slideChanged.bind(this, instance)
