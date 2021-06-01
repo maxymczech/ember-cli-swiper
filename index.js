@@ -33,6 +33,5 @@ module.exports = {
 
   included(/* app */) {
     this._super.included.apply(this, arguments);
-    this.import('vendor/swiper/swiper-bundle.css');
   }
 };
