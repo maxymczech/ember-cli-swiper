@@ -1,3 +1,4 @@
+import 'swiper/swiper-bundle.css';
 import SwiperCore, { Lazy, Navigation, Pagination } from 'swiper/core';
 import Component from '@ember/component';
 import Swiper from 'swiper';
