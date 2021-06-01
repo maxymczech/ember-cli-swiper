@@ -26,9 +26,10 @@
     "url": "https://github.com/Ember-Swiper/ember-cli-swiper"
   },
   "dependencies": {
+    "ember-auto-import": "^2.0.1",
     "ember-cli-babel": "^6.12.0",
     "ember-cli-htmlbars": "^2.0.1",
-    "swiper": "git+https://github.com/nolimits4web/swiper.git#c7327d41a41ceb5a7685d8ccdace11253836c420"
+    "swiper": "^6.7.0"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
